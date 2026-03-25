@@ -117,23 +117,7 @@ See https://docs.openlibrary.org/2_Developers/misc/Testing.html for more informa
 
 ## pre-commit hooks
 
-Be confident in changing files you can check the quality (linter) with [pre-commit](https://pre-commit.com/index.html).
-It is used to inspect the snapshot that is about to be committed, to see if there are any syntax errors, typos, or a handful of other common issues.
-You can see the actions descriptions in [pre-commit-config.yml](https://github.com/internetarchive/openlibrary/blob/master/.pre-commit-config.yaml).
-
-The pre-commit is automatically run against open PRs. Install the pre-commit locally to avoid waiting for the PR checks to run in the cloud.
-
-### Installation
-
-```
-pip install pre-commit
-# or on mac you can run
-brew install pre-commit
-```
-
-After executing the last command, when you normally run `git commit`, pre-commit will also perform its checks.
-
-### Running manually
+For installation, see the [pre-commit documentation](https://pre-commit.com/index.html). To run checks manually:
 
 ```
 pre-commit run --all-files
@@ -154,10 +138,4 @@ Follow these rules when creating a PR:
 4. **Resolve all code review (CR) comments**: Treat comments as a todo list. Most PRs will require some edits before getting merged, so don't get discouraged if you have to make some changes!
 5. **Reply when resolving CR comments**: When resolving a comment, reply with either "DONE" or "WON'T FIX because ...". A reviewer will unresolve a comment if they feel it's necessary.
 
-### What to expect after opening your first PR
-
-- **Automated checks will run first.** You'll see status checks appear on your PR — including pre-commit linting and CI tests. If any fail, click "Details" to see what to fix. This is normal and expected.
-- **Reviews take time.** Maintainers are volunteers. If you don't hear back within a week, a polite follow-up comment is welcome.
-- **Most PRs need at least one round of edits.** Getting change requests doesn't mean your PR is rejected — it means a maintainer read it carefully enough to give you feedback. Address each comment and mark it resolved.
-- **Be specific when asking for feedback.** Instead of "please review," try: "I changed X in file Y to fix Z — I'm unsure whether approach A or B is better here." Clear questions get faster, more useful responses.
 
